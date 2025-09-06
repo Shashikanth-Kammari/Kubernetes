@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Deployment_name
+  labels:
+    name: Name_deployment
+    type: demostrate
+spec:
+  template:
+    metadata:
+      name: demo_pod
+      labels:
+        name: Name_deployment
+        type: demostrate
+    spec:
+      containers:
+      - container_name: Demo_container
+        image: nginx
+  replicas: 3
+  matchLabels:
+    name: Name_deployment
+    type: demostrate
