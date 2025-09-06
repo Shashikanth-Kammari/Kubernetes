@@ -4,6 +4,7 @@ metadata:
   name: resources
   labels:
     namespace: homepage.k8s
+    name: Homepage_pod.k8s
 spec:
   containers:
   -  name: nginx
