@@ -1,0 +1,19 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: resources
+  labels:
+    namespace: homepage.k8s
+spec:
+  containers:
+  -  name: nginx
+     image: nginx
+     resources:
+       # this is soft limit
+       requests:
+         cpu: "100m"
+         memory: "128Mi"
+       # limits should be atleast equal or more than requests i.e. hard limi
+       limits:
+         cpu: "100m"
+         memory: "128Mi"
