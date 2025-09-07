@@ -1,0 +1,14 @@
+apiServer: v1
+kind: Pod
+metadata:
+  name: simple-app
+  labels:
+    name: web-app
+spec:
+  containers:
+  - name: web-app
+    image: simple-web-app
+    containerPort: 8080
+  - name: main-app
+    image: main-web-app
+    
