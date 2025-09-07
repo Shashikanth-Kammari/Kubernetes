@@ -1,0 +1,17 @@
+apiServer: v1
+kind: Pod
+metadata:
+  name: web-app
+  labels:
+    name: init-container
+spec:
+  containers:
+  - name: wep-app-container
+    image: wep-app-image
+    ports:
+      containerPort: 8080
+  initContainers:
+  - name: log-shipper
+    image: busybox
+    command: "setup-log-shipper.sh"
+    restartPolicy: always
