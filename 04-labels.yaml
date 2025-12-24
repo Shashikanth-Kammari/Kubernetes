@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  namespace: Bcom
+  labels:
+    type: myapp
+    name: homepage
+spec:
+  containers:
+  - name: myapp-containers
+    image: application_image
