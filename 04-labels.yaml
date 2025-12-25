@@ -10,3 +10,6 @@ spec:
   containers:
   - name: myapp-containers
     image: application_image
+  containers:
+  - name: myapp-containers2
+    image: application_homepage
