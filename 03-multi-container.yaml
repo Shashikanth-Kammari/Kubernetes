@@ -7,7 +7,7 @@ metadata:
     type: myapp
 spec:
   containers:
-  - name: myapp-containers
-    image: application_image
-  - name: second-application_image
-    image: secondapplication_image_name
+  - name: myapp
+    image: nginx
+  - name: logs
+    image: almalinux
