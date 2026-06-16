@@ -5,11 +5,11 @@ metadata:
   namespace: Bcom
   labels:
     type: myapp
-    name: homepage
+    namespace: Bcom
 spec:
   containers:
-  - name: myapp-containers
-    image: application_image
+  - name: myapp
+    image: nginx
   containers:
-  - name: myapp-containers2
-    image: application_homepage
+  - name: logs
+    image: alamalinux
