@@ -5,3 +5,4 @@ metadata:
 data:
   APP_COLOR: blue
   APP_MODE: prod
+  github: "we nee to give git hub url"
