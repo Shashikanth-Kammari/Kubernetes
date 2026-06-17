@@ -4,6 +4,7 @@ metadata:
   name: annotations-demo
   annotations:
     imageregistry: "https://hub.docker.com/"
+    kubernetes
 spec:
   containers:
   - name: nginx
