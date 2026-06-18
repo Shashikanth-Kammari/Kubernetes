@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name:  replcaset-nginx
+  # this is the replcas sources
+  labels:
+    name: nginx
+    tier: frontend
+spec:
+# this is the how many replicas we need we can modify if need it to change
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: frontend
+  #below is the pod defination 
+  template:
+    metadata:
+      name: myapp
+      labels:
+        tier: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
