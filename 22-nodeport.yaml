@@ -13,4 +13,4 @@ spec:
   - name:  name-of-the-port
     port:  80   #service port
     targetPort:  8080 #traget port
-    nodePort: 32768
+    nodePort: 32760
