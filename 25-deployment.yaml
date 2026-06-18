@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+    purpose: deployment
+    project: test-project
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+      tier: web
+      project: test-project
+  template:
+    metadata:
+      labels:
+        app: nginx
+        tier: web
+        project: test-project
+    spec:
+      containers:
+      - name: name
+        image: Enter containers image
