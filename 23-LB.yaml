@@ -1,0 +1,16 @@
+piVersion: v1 
+kind: Service
+metadata:
+  name:  Service-lb
+spec:
+  type: LoadBalancer
+  selector:
+    project: Bcom
+    environment: regression
+    name: Macys
+    cluster: Non-trans
+  ports:
+  - name:  name-of-the-port
+    port:  80   #service port
+    targetPort:  8080 #traget port
+    nodePort: 32760
